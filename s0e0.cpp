@@ -34,7 +34,7 @@ int checkConstant(string s ,int st, int end)
 
 bool isoperand(char x)
 {
-   return ((x=='=')||(x=='-')||(x=='+')||(x=='*')||(x=='/')||(x=='%')|| (x=='(')||(x==')'));
+   return ((x=='=')||(x=='-')||(x=='+')||(x=='*')||(x=='/')||(x=='%')|| (x=='(')||(x==')') || (x=='^'));
 
 }
 
@@ -58,6 +58,8 @@ string checkOperand(char x)
   s+="Bracket Open";
   else if(x==')')
   s+="Bracket Close";
+  else if(x=='^')
+  s+="Exponentation";  
   s+="Operator";
   
   return s;
